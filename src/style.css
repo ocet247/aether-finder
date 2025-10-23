@@ -1,0 +1,12 @@
+.icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+/*Otherwise the dropdown expands it's height from 44 to 45 on item selection*/
+.choices__inner {
+  height: 44px !important;
+  min-height: 44px !important;
+  box-sizing: border-box;
+}
