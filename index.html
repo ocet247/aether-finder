@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPC RNG Lookup</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"/>
+  <script type="module" crossorigin src="/assets/index-l22OGPzq.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-B9ddvZCo.css">
+</head>
+<body class="bg-light d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+
+<div class="container">
+    <div class="card p-4 shadow col-md-10 col-lg-8 mx-auto">
+        <!-- World Size Toggle -->
+        <div class="col-12 mb-4">
+            <label class="form-label">World Size</label>
+            <div class="btn-group d-flex" role="group" aria-label="World size toggle">
+                <input type="radio" class="btn-check" name="world-size" id="size-small" value="0" autocomplete="off"
+                       checked>
+                <label class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2"
+                       for="size-small">
+                    <img src="Small_world_icon.webp" alt="Small">
+                    Small
+                </label>
+
+                <input type="radio" class="btn-check" name="world-size" id="size-medium" value="1" autocomplete="off">
+                <label class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2"
+                       for="size-medium">
+                    <img src="Medium_world_icon.webp" alt="Medium">
+                    Medium
+                </label>
+
+                <input type="radio" class="btn-check" name="world-size" id="size-large" value="2" autocomplete="off">
+                <label class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2"
+                       for="size-large">
+                    <img src="Large_world_icon.webp" alt="Large">
+                    Large
+                </label>
+            </div>
+        </div>
+
+        <!-- Jungle Side Toggle -->
+        <div class="col-12 mb-4">
+            <label class="form-label text-center">Jungle Side</label>
+            <div class="btn-group d-flex" role="group" aria-label="Jungle side toggle">
+                <input type="radio" class="btn-check" name="jungle-side" id="jungle-left" value="0" autocomplete="off"
+                       checked>
+                <label class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2"
+                       for="jungle-left">
+                    <i class="bi bi-arrow-left-circle"></i>
+                    Left
+                </label>
+
+                <input type="radio" class="btn-check" name="jungle-side" id="jungle-right" value="1" autocomplete="off">
+                <label class="btn btn-outline-success d-flex align-items-center justify-content-center gap-2"
+                       for="jungle-right">
+                    <i class="bi bi-arrow-right-circle"></i>
+                    Right
+                </label>
+            </div>
+        </div>
+
+        <div class="col-12 mb-4">
+            <label class="form-label d-block mb-3">Select your first NPC</label>
+
+            <!-- NPC Selection Row -->
+            <div class="d-flex align-items-center gap-4">
+
+                <div class="btn-group" role="group" aria-label="NPC selection">
+                    <input type="radio" class="btn-check" name="npc" id="npc-guide" value="Guide" autocomplete="off"
+                           checked>
+                    <label class="btn btn-outline-primary p-2" for="npc-guide">
+                        <img src="Guide_Icon.webp" alt="Guide" class="icon">
+                    </label>
+
+                    <input type="radio" class="btn-check" name="npc" id="npc-demo" value="Demolitionist"
+                           autocomplete="off">
+                    <label class="btn btn-outline-primary p-2" for="npc-demo">
+                        <img src="Demolitionist_Icon.webp" alt="Demolitionist" class="icon">
+                    </label>
+
+                    <input type="radio" class="btn-check" name="npc" id="npc-party-girl" value="Party Girl"
+                           autocomplete="off">
+                    <label class="btn btn-outline-primary p-2" for="npc-party-girl">
+                        <img src="Party_Girl_Icon.webp" alt="Party Girl" class="icon">
+                    </label>
+
+                    <input type="radio" class="btn-check" name="npc" id="npc-tax-collector" value="Tax Collector"
+                           autocomplete="off">
+                    <label class="btn btn-outline-primary p-2" for="npc-tax-collector">
+                        <img src="Tax_Collector_Icon.webp" alt="Tax Collector" class="icon">
+                    </label>
+                </div>
+
+                <div class="flex-grow-1">
+                    <label for="name" class="form-label mb-1">Name</label>
+                    <select id="name" class="form-select" autocomplete="off"></select>
+                </div>
+            </div>
+        </div>
+
+        <div id="result-container" class="col-md-12 mt-4">
+            <div class="card p-3">
+                <div class="d-flex align-items-center gap-3 mb-2">
+                    <img id="compass-icon" src="Compass_Icon.webp" alt="Compass" class="icon">
+                    <div>
+                        <span id="coordinates">--</span>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-3">
+                    <img id="screen-icon" src="Ocean_Icon.webp" alt="Screen" class="icon">
+                    <div>
+                        <span id="screens-offset">--</span>
+<!--                        <i class="bi bi-arrow-left-circle"></i>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
