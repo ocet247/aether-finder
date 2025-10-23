@@ -79,9 +79,12 @@ nameSelect.addEventListener("change", () => {
 
 function updateOutput() {
     const { coordinates, screensOffset } = computeAetherPositionData(worldSize, isJungleLeft, npcName);
+    const moveDirection = screensOffset < 0 ?
+        isJungleLeft ? "away from" : "into" :
+        isJungleLeft ? "into" : "away from";
 
     coordinatesElement.textContent = `${coordinates}' ${isJungleLeft ? "West" : "East"}`;
-    screensOffsetElement.textContent = `${Math.abs(screensOffset).toFixed(2)} screens ${screensOffset > 0 ? "away from" : "into"} the ocean biome.`;
+    screensOffsetElement.textContent = `${Math.abs(screensOffset).toFixed(2)} screens ${moveDirection} the ocean biome.`;
 }
 
 updateNpcChoices();
