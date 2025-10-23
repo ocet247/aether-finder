@@ -10,3 +10,10 @@
   min-height: 44px !important;
   box-sizing: border-box;
 }
+
+@media (max-width: 576px) {
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+}
