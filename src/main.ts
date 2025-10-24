@@ -38,7 +38,7 @@ const npcChoicesMap: NpcChoicesMap =
         Object.entries(NpcNames).map(([npc, names]) => [
             npc as Npc,
             (names as NpcName[]).slice().sort().map(
-                name => ({ value: name, label: name })
+                name => ({value: name, label: name})
             )
         ])
     ) as NpcChoicesMap;
@@ -78,7 +78,7 @@ nameSelect.addEventListener("change", () => {
 });
 
 function updateOutput() {
-    const { coordinates, screensOffset } = computeAetherPositionData(worldSize, isJungleLeft, npcName);
+    const {coordinates, screensOffset} = computeAetherPositionData(worldSize, isJungleLeft, npcName);
 
     coordinatesElement.textContent = `${coordinates}' ${isJungleLeft ? "West" : "East"}`;
     screensOffsetElement.textContent = `${Math.abs(screensOffset).toFixed(2)} screens ${screensOffset < 0 ? "away from" : "into"} the ocean biome.`;

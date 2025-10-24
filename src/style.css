@@ -1,20 +1,20 @@
 .icon {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
 }
 
 /*Otherwise the dropdown expands it's height from 44 to 45 on item selection*/
 .choices__inner {
-  height: 44px !important;
-  min-height: 44px !important;
-  box-sizing: border-box;
+    height: 44px !important;
+    min-height: 44px !important;
+    box-sizing: border-box;
 }
 
 
 @media (max-width: 576px) {
-  .icon {
-    width: 32px;
-    height: 32px;
-  }
+    .icon {
+        width: 32px;
+        height: 32px;
+    }
 }
