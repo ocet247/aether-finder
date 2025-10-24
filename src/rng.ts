@@ -4,7 +4,7 @@ import {type NameRngMap, type NpcName, WorldSize} from "./types.ts";
 const namesRng: NameRngMap = {};
 function addNamesToRng(names: NpcName[]): void{
     const step = 1.0 / names.length;
-    let current = 0 /*step / 2*/;
+    let current = step / 2;
     for (const name of names) {
         namesRng[name] = current;
         current += step;
